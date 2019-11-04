@@ -1,5 +1,6 @@
-CREATE TABLE IF NOT EXIST `users` (
-  `id` int(50) DEFAULT NULL,
+CREATE TABLE IF NOT EXISTS db.users
+(
+  `id` int(50) NOT NULL AUTO_INCREMENT,
   `name` varchar(50) DEFAULT NULL,
   `password` varchar(225) DEFAULT NULL,
   `email` varchar(50) DEFAULT NULL,
