@@ -11,9 +11,21 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-Route::get('1', function() { return 'Thur c la page 1 !'; });
-Route::get('2', function() { return 'Thur la c la page 2 !'; });
-Route::get('3', function() { return 'Wooooaaa Thur tu force la !'; });
+// Route::get('/', function () {
+//     return view('welcome');
+// });
+
+Route::get('/users', 'WelcomeController@getInfos');
+Route::post('/users', 'WelcomeController@postInfos');
+
+// Route::get('/1', function()
+// {
+//     return view('vue1');
+// });
+// Route::get('article/{n}', function($n) {
+//     return view('article')->with('numero', $n);
+// })->where('n', '[0-9]+');
+
+// Route::get('facture/{n}', function($n) {
+//     return view('facture')->withNumero($n);
+// })->where('n', '[0-9]+');
