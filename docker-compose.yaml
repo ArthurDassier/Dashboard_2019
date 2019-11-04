@@ -1,4 +1,4 @@
-version: '3'
+version: '3.5'
 
 services:
   laravel-app:
@@ -12,17 +12,23 @@ services:
     environment:
       - APACHE_RUN_USER=#1000
       - APACHE_RUN_GROUP=#1000
+      - DB_HOST=mysql-db
+      - DB_DATABASE=db
+      - DB_PASSWORD=securerootpassword
     volumes:
       - .:/var/www/html
     ports:
       - 8000:80
     networks:
-      - backend-network
+      backend:
+        aliases:
+          - laravel-app
 
   mysql-db:
     image: mysql:5.7
     container_name: mysql-db
     volumes:
+      - ./schema.sql:/docker-entrypoint-initdb.d/schema.sql
       - ./run/var:/var/lib/mysql
     environment:
       - MYSQL_ROOT_PASSWORD=securerootpassword
@@ -30,7 +36,9 @@ services:
       - MYSQL_USER=dbuser
       - MYSQL_PASSWORD=secret
     networks:
-      - backend-network
+      backend:
+        aliases:
+          - db
 
   phpmyadmin:
     depends_on:
@@ -43,7 +51,10 @@ services:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: securerootpassword 
     networks:
-      - backend-network
+      backend:
+        aliases:
+          - myadmin
 
 networks:
-  backend-network:
+  backend:
+    name: backend-network
