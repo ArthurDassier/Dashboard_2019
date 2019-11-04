@@ -11,12 +11,14 @@
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
+Route::get('/', function () {
+    return view('welcome');
+});
 
 Route::get('/users', 'WelcomeController@getInfos');
 Route::post('/users', 'WelcomeController@postInfos');
+
+Route::get('/got', 'ListController@show');
 
 // Route::get('/1', function()
 // {
@@ -29,3 +31,7 @@ Route::post('/users', 'WelcomeController@postInfos');
 // Route::get('facture/{n}', function($n) {
 //     return view('facture')->withNumero($n);
 // })->where('n', '[0-9]+');
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

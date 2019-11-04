@@ -1,4 +1,4 @@
-version: '3.5'
+version: '3'
 
 services:
   laravel-app:
@@ -17,9 +17,7 @@ services:
     ports:
       - 8000:80
     networks:
-      backend:
-        aliases:
-          - laravel-app
+      - backend-network
 
   mysql-db:
     image: mysql:5.7
@@ -32,9 +30,7 @@ services:
       - MYSQL_USER=dbuser
       - MYSQL_PASSWORD=secret
     networks:
-      backend:
-        aliases:
-          - db
+      - backend-network
 
   phpmyadmin:
     depends_on:
@@ -47,10 +43,7 @@ services:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: securerootpassword 
     networks:
-      backend:
-        aliases:
-          - myadmin
+      - backend-network
 
 networks:
-  backend:
-    name: backend-network
+  backend-network:
