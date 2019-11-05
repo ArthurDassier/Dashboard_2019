@@ -11,26 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/users', 'WelcomeController@getInfos');
-Route::post('/users', 'WelcomeController@postInfos');
-
-Route::get('/got', 'ListController@show');
-
-// Route::get('/1', function()
-// {
-//     return view('vue1');
-// });
-// Route::get('article/{n}', function($n) {
-//     return view('article')->with('numero', $n);
-// })->where('n', '[0-9]+');
-
-// Route::get('facture/{n}', function($n) {
-//     return view('facture')->withNumero($n);
-// })->where('n', '[0-9]+');
+Route::get('/', 'ListController@show');
 
 Auth::routes();
 
