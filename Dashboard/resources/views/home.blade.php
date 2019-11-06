@@ -1,7 +1,9 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<iframe id="widget-iframe" width="300px" height="235px"
+ src="https://services.metservice.com/weather-widget/widget?params=blue|large|portrait|days-3|classic&loc=auckland&type=urban" allowtransparency="true" style="border:none" >
+{{-- <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -19,5 +21,5 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
 @endsection

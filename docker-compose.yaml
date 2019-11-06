@@ -10,6 +10,7 @@ services:
       - mysql-db
     container_name: laravel-app
     environment:
+      - APP_NAME=Dashboard
       - APACHE_RUN_USER=#1000
       - APACHE_RUN_GROUP=#1000
       - DB_HOST=mysql-db
