@@ -12,7 +12,7 @@ commit_files() {
 }
 
 upload_files() {
-  git remote add origin-epitech git@git.epitech.eu:/arthur.dassier@epitech.eu/SEC_crypto_2019
+  git remote add origin-epitech git@git.epitech.eu:/arthur.dassier@epitech.eu/DEV_dashboard_2019
   git push origin-epitech master
 }
 setup_git
