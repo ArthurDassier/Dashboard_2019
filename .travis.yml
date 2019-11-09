@@ -8,6 +8,7 @@ before_install:
   - chmod +x push.sh
 
 jobs:
+  include:
   - stage: Push on Epitech
     if: (NOT type IN (pull_request)) AND (branch = master)
     script:
