@@ -1,5 +1,15 @@
 @extends('layouts.app', ['activePage' => 'dashboard', 'titlePage' => __('Dashboard')])
 
+<script>
+
+function myFunct()
+{
+  alert("PLOP");
+  // location.reload();
+}
+
+</script>
+
 @section('content')
   <div class="content">
     <div class="container-fluid">
@@ -171,7 +181,7 @@
                         </td>
                         <td>Sign contract for "What are conference organizers afraid of?"</td>
                         <td class="td-actions text-right">
-                          <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
+                          <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm" onclick="myFunct()">
                             <i class="material-icons">edit</i>
                           </button>
                           <button type="button" rel="tooltip" title="Remove" class="btn btn-danger btn-link btn-sm">
@@ -413,6 +423,20 @@
             </div>
           </div>
         </div>
+        <input type="button" id="toggler" value="Toggler" onClick="action();" />
+        <input type="button" id="togglee" value="Togglee" />
+
+        <script>
+          var hidden = false;
+          function action() {
+              hidden = !hidden;
+              if(hidden) {
+                  document.getElementById('togglee').style.visibility = 'hidden';
+              } else {
+                  document.getElementById('togglee').style.visibility = 'visible';
+              }
+          }
+        </script>
       </div>
     </div>
   </div>

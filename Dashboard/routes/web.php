@@ -59,3 +59,9 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
+
+Route::get('test', function () {
+	$comments = collect([1, 2, 3]);
+	// return view('test')->withComments(collect(["le 1", "le 2"])->all());
+	return view('test')->withComments($comments->all());
+});
