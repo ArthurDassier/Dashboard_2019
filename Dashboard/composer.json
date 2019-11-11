@@ -10,6 +10,7 @@
     "require": {
         "php": "^7.2",
         "arrilot/laravel-widgets": "^3.13",
+        "bioudi/laravel-meta-weather-api": "^0.1.2@alpha",
         "fideloper/proxy": "^4.0",
         "laravel-frontend-presets/material-dashboard": "^1.0",
         "laravel/framework": "^6.2",

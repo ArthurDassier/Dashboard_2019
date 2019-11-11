@@ -59,6 +59,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::put('profile/password', ['as' => 'profile.password', 'uses' => 'ProfileController@password']);
 });
 
+use Bioudi\LaravelMetaWeatherApi\Weather;
+$weather = new Weather();
 
 Route::get('test', function () {
 	$comments = collect([1, 2, 3]);
