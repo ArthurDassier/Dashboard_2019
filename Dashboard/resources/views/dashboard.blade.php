@@ -12,7 +12,18 @@ function myFunct()
 
 @section('content')
   <div class="content">
-    @widget('Weather')
+    <div class="col-lg-3 col-md-6 col-sm-6">
+      <form class="navbar-form">
+        <div class="input-group no-border">
+        <input type="text" value="" class="form-control" placeholder="Search...">
+        <button type="submit" class="btn btn-white btn-round btn-just-icon">
+          <i class="material-icons">search</i>
+          <div class="ripple-container"></div>
+        </button>
+        </div>
+      </div>
+      @widget('Weather', ['city' => 'casablanca'])
+    </form>
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">

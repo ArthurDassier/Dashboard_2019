@@ -18,7 +18,9 @@ class Weather extends AbstractWidget
      *
      * @var array
      */
-    protected $config = [];
+    protected $config = [
+        'city' => ''
+    ];
 
     /**
      * Treat this method as a controller action.

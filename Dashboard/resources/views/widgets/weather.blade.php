@@ -8,11 +8,13 @@
   //get_object_vars($weather->getByCityName('paris'))['title'] -> nom de l'endroit
   //get_object_vars($weather->getByCityName('paris'))['location_type'] -> type d'endroit
   //get_object_vars($weather->getByCityName('paris'))['timezone'] -> timezone
+  // {{$config['city']}} -> valeur envoyer
 
+  
   use Bioudi\LaravelMetaWeatherApi\Weather;
   $weather = new Weather();
   // var_dump($weather->getByCityName('paris'));
-  print_r(get_object_vars($weather->getByCityName('paris'))['title']);
+  // print_r(get_object_vars($weather->getByCityName('paris'))['title']);
 ?>
 
 <div class="content">
@@ -24,16 +26,16 @@
             <div class="card-icon">
               <i class="material-icons">filter_drama</i>
             </div>
-            <p class="card-category">Weather in <?php print_r(get_object_vars($weather->getByCityName('paris'))['title']);?></p>
+            <p class="card-category">Weather in <?php print_r(get_object_vars($weather->getByCityName($config['city']))['title']);?></p>
             <h3 class="card-title">
-              <?php print_r(get_object_vars(get_object_vars($weather->getByCityName('paris'))['consolidated_weather'][0])['min_temp']);?>
-               - <?php print_r(get_object_vars(get_object_vars($weather->getByCityName('paris'))['consolidated_weather'][0])['max_temp']);?>
+              <?php print_r(get_object_vars(get_object_vars($weather->getByCityName($config['city']))['consolidated_weather'][0])['min_temp']);?>
+               - <?php print_r(get_object_vars(get_object_vars($weather->getByCityName($config['city']))['consolidated_weather'][0])['max_temp']);?>
               <small>°C</small>
             </h3>
           </div>
           <div class="card-footer">
             <div class="stats">
-              <p>Weather state: <?php print_r(get_object_vars(get_object_vars($weather->getByCityName('paris'))['consolidated_weather'][0])['weather_state_name'])?></p>
+              <p>Weather state: <?php print_r(get_object_vars(get_object_vars($weather->getByCityName($config['city']))['consolidated_weather'][0])['weather_state_name'])?></p>
             </div>
           </div>
         </div>
