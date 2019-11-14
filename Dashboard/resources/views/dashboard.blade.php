@@ -12,18 +12,37 @@ function myFunct()
 
 @section('content')
   <div class="content">
-    <div class="col-lg-3 col-md-6 col-sm-6">
-      <form class="navbar-form">
-        <div class="input-group no-border">
-        <input type="text" value="" class="form-control" placeholder="Search...">
-        <button type="submit" class="btn btn-white btn-round btn-just-icon">
-          <i class="material-icons">search</i>
-          <div class="ripple-container"></div>
-        </button>
-        </div>
+    <div class="form-group">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <label for="test-content">Select city</label>
+        @php
+        $listCity = array('paris', 'new york', 'berlin', 'hong kong', 'tanger');
+        $citySelect = 'paris';
+        @endphp
+        <script>
+          function myTest(val) {
+            $citySelect = val;
+            alert($citySelect);
+            // location.reload();
+          }
+        </script>
+        <!-- <form  -->
+        <select id="cc" name="city_id" class="form-control" onChange="myTest(this.value)">
+        @foreach($listCity as $t)
+          <option> {{$t}} </option>
+        @endforeach paris
+        </select>
       </div>
-      @widget('Weather', ['city' => 'casablanca'])
-    </form>
+    </div>
+      <script>
+      import EventBus from './event-bus.js'
+      export default {
+          // when Axios resolves
+          EventBus.$emit('event-name', data)
+      }
+      </script>
+    {{$citySelect}}
+    @widget('Weather', ['city' => $citySelect])
     <div class="container-fluid">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">

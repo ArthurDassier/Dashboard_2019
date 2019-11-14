@@ -11,7 +11,7 @@ class Weather extends AbstractWidget
      *
      * @var int|float
      */
-    public $reloadTimeout = 30;
+    public $reloadTimeout = 5;
 
     /**
      * The configuration array.
@@ -20,6 +20,14 @@ class Weather extends AbstractWidget
      */
     protected $config = [
         'city' => ''
+    ];
+
+    protected $test = [
+        'paris',
+        'new york',
+        'berlin',
+        'hong kong',
+        'tanger'
     ];
 
     /**
@@ -32,6 +40,7 @@ class Weather extends AbstractWidget
 
         return view('widgets.weather', [
             'config' => $this->config,
+            'test' => $this->test,
         ]);
     }
 }
