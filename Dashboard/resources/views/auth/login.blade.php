@@ -20,7 +20,7 @@
               <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
                 <i class="fa fa-twitter"></i>
               </a>
-              <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
+              <a href="{{ url('/redirect') }}" class="btn btn-just-icon btn-link btn-white">
                 <i class="fa fa-google-plus"></i>
               </a>
             </div>

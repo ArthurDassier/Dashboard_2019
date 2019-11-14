@@ -17,6 +17,10 @@ Route::get('/', function () {
 
 Auth::routes();
 
+
+Route::get('/redirect', 'SocialAuthGoogleController@redirect');
+Route::get('/callback', 'SocialAuthGoogleController@callback');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 
@@ -67,3 +71,6 @@ Route::get('test', function () {
 	// return view('test')->withComments(collect(["le 1", "le 2"])->all());
 	return view('test')->withComments($comments->all());
 });
+
+// Route::get('login/google', 'Auth\LoginController@redirectToProvider');
+// Route::get('login/google/callback', 'Auth\LoginController@handleProviderCallback');
