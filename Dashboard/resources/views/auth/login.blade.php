@@ -18,7 +18,7 @@
                 <i class="fa fa-facebook-square"></i>
               </a>
               <a href="{{ url('github/redirect') }}" class="btn btn-just-icon btn-link btn-white">
-                <i class="fa fa-twitter"></i>
+                <i class="fa fa-github"></i>
               </a>
               <a href="{{ url('google/redirect') }}" class="btn btn-just-icon btn-link btn-white">
                 <i class="fa fa-google-plus"></i>
