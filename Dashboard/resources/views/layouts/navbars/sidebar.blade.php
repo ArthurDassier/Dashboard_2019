@@ -6,7 +6,7 @@
   -->
   <div class="logo">
     <a href="https://creative-tim.com/" class="simple-text logo-normal">
-      {{ __('Creative Tim') }}
+      {{ __('Grade D au moins') }}
     </a>
   </div>
   <div class="sidebar-wrapper">
@@ -19,8 +19,8 @@
       </li>
       <li class="nav-item {{ ($activePage == 'profile' || $activePage == 'user-management') ? ' active' : '' }}">
         <a class="nav-link" data-toggle="collapse" href="#laravelExample" aria-expanded="true">
-          <i><img style="width:25px" src="{{ asset('material') }}/img/laravel.svg"></i>
-          <p>User managment
+          <i><img style="width:25px" src="{{ asset('material') }}/img/cog.png"></i>
+          <p>Options
             <b class="caret"></b>
           </p>
         </a>
@@ -28,14 +28,14 @@
           <ul class="nav">
             <li class="nav-item{{ $activePage == 'profile' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('profile.edit') }}">
-                <span class="sidebar-mini"> UP </span>
-                <span class="sidebar-normal">{{ __('User profile') }} </span>
+                <i class="material-icons">account_circle</i>
+                <span class="sidebar-normal">{{ __('Your profile') }} </span>
               </a>
             </li>
             <li class="nav-item{{ $activePage == 'user-management' ? ' active' : '' }}">
               <a class="nav-link" href="{{ route('user.index') }}">
-                <span class="sidebar-mini"> UM </span>
-                <span class="sidebar-normal"> {{ __('User Management') }} </span>
+                <i class="material-icons">group</i>
+                <span class="sidebar-normal"> {{ __('Users') }} </span>
               </a>
             </li>
           </ul>
@@ -71,12 +71,12 @@
           <p>{{ __('Notifications') }}</p>
         </a>
       </li> --}}
-      <li class="nav-item{{ $activePage == 'language' ? ' active' : '' }}">
+      {{-- <li class="nav-item{{ $activePage == 'language' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('language') }}">
           <i class="material-icons">language</i>
           <p>{{ __('RTL Support') }}</p>
         </a>
-      </li>
+      </li> --}}
       <!-- <li class="nav-item active-pro{{ $activePage == 'upgrade' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('upgrade') }}">
           <i class="material-icons">unarchive</i>
