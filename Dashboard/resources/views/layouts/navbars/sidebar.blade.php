@@ -1,4 +1,4 @@
-<div class="sidebar" data-color="orange" data-background-color="white" data-image="{{ asset('material') }}/img/sidebar-1.jpg">
+<div class="sidebar" data-color="orange" data-background-color="white" data-image="{{ asset('material') }}/img/sylvanas.jpg">
   <!--
       Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -41,7 +41,7 @@
           </ul>
         </div>
       </li>
-      <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
+      {{-- <li class="nav-item{{ $activePage == 'table' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('table') }}">
           <i class="material-icons">content_paste</i>
             <p>{{ __('Table List') }}</p>
@@ -70,7 +70,7 @@
           <i class="material-icons">notifications</i>
           <p>{{ __('Notifications') }}</p>
         </a>
-      </li>
+      </li> --}}
       <li class="nav-item{{ $activePage == 'language' ? ' active' : '' }}">
         <a class="nav-link" href="{{ route('language') }}">
           <i class="material-icons">language</i>
