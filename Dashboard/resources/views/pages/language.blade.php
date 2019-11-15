@@ -4,10 +4,10 @@
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="{{ asset('material') }}/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="{{ asset('material') }}/img/favicon.png">
+  <link rel="icon" type="image/png" href="{{ asset('material') }}/img/alliance_logo.png">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
-      {{ __('Material Dashboard by Creative Tim') }}
+      {{ __('Dashboard') }}
   </title>
   <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
   <!--     Fonts and icons     -->
@@ -22,7 +22,7 @@
   <link href="{{ asset('material') }}/css/material-dashboard-rtl.css?v=1.1" rel="stylesheet" />
   <!-- CSS Just for demo purpose, don't include it in your project -->
   <link href="{{ asset('material') }}/demo/demo.css" rel="stylesheet" />
-  
+
 
   <!-- Style Just for persian demo purpose, don't include it in your project -->
   <style>
@@ -44,7 +44,7 @@
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="{{ asset('material') }}/img/sidebar-1.jpg">
+    <div class="sidebar" data-color="green" data-background-color="white" data-image="{{ asset('material') }}/img/sylvanas.jpg">
       <!--
         Tip 1: You can change the color of the sidebar using: data-color="purple | azure | green | orange | danger"
 
@@ -104,7 +104,7 @@
                     <i class="material-icons">unarchive</i>
                     <p>Upgrade to PRO</p>
                 </a>
-            </li> 
+            </li>
         </ul>
       </div>
     </div>
@@ -430,7 +430,7 @@
                                 </label>
                               </div>
                             </td>
-                            <td>بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته 
+                            <td>بعد از اینکه متن در آن قرار گیرد چگونه به نظر می‌رسد و قلم‌ها و اندازه‌بندی‌ها چگونه در نظر گرفته
                             </td>
                             <td class="td-actions text-right">
                               <button type="button" rel="tooltip" title="ویرایش وظیفه" class="btn btn-primary btn-link btn-sm">
@@ -641,30 +641,7 @@
         </div>
         <footer class="footer">
           <div class="container-fluid">
-            <nav class="float-left">
-              <ul>
-                <li>
-                  <a href="https://www.creative-tim.com">
-                    تیم خلاق
-                  </a>
-                </li>
-                <li>
-                  <a href="https://creative-tim.com/presentation">
-                    درباره ما
-                  </a>
-                </li>
-                <li>
-                  <a href="http://blog.creative-tim.com">
-                    بلاگ
-                  </a>
-                </li>
-                <li>
-                  <a href="https://www.creative-tim.com/license">
-                    اجازه نامه
-                  </a>
-                </li>
-              </ul>
-            </nav>
+
             <div class="copyright float-right">
               &copy;
               <script>
@@ -682,7 +659,7 @@
     <script src="{{ asset('material') }}/js/core/popper.min.js"></script>
     <script src="{{ asset('material') }}/js/core/bootstrap-material-design.min.js"></script>
     <script src="{{ asset('material') }}/js/plugins/perfect-scrollbar.jquery.min.js"></script>
-    
+
     <!--  Google Maps Plugin    -->
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE'"></script>
     <!-- Chartist JS -->

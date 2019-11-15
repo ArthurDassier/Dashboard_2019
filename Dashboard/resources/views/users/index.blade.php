@@ -1,4 +1,4 @@
-@extends('layouts.app', ['activePage' => 'user-management', 'titlePage' => __('User Management')])
+@extends('layouts.app', ['activePage' => 'user-management', 'titlePage' => __('Users')])
 
 @section('content')
   <div class="content">
@@ -8,7 +8,7 @@
             <div class="card">
               <div class="card-header card-header-primary">
                 <h4 class="card-title ">{{ __('Users') }}</h4>
-                <p class="card-category"> {{ __('Here you can manage users') }}</p>
+                <p class="card-category"> {{ __('') }}</p>
               </div>
               <div class="card-body">
                 @if (session('status'))
@@ -61,7 +61,7 @@
                               <form action="{{ route('user.destroy', $user) }}" method="post">
                                   @csrf
                                   @method('delete')
-                              
+
                                   <a rel="tooltip" class="btn btn-success btn-link" href="{{ route('user.edit', $user) }}" data-original-title="" title="">
                                     <i class="material-icons">edit</i>
                                     <div class="ripple-container"></div>

@@ -12,7 +12,7 @@ function myFunct()
 
 @section('content')
   <div class="content">
-    <div class="form-group">
+    {{-- <div class="form-group">
       <div class="col-lg-3 col-md-6 col-sm-6">
         <label for="test-content">Select city</label>
         @php
@@ -41,9 +41,10 @@ function myFunct()
           EventBus.$emit('event-name', data)
       }
       </script>
-    {{$citySelect}}
-    @widget('Weather', ['city' => $citySelect])
-    <div class="container-fluid">
+    {{$citySelect}} --}}
+    @widget('Weather', ['city' => 'Paris'])
+    </div>
+    {{-- <div class="container-fluid">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="card card-stats">
@@ -112,8 +113,8 @@ function myFunct()
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
+      </div> --}}
+      {{-- <div class="row">
         <div class="col-md-4">
           <div class="card card-chart">
             <div class="card-header card-header-success">
@@ -130,8 +131,8 @@ function myFunct()
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
+        </div> --}}
+        {{-- <div class="col-md-4">
           <div class="card card-chart">
             <div class="card-header card-header-warning">
               <div class="ct-chart" id="websiteViewsChart"></div>
@@ -146,8 +147,8 @@ function myFunct()
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-md-4">
+        </div> --}}
+        {{-- <div class="col-md-4">
           <div class="card card-chart">
             <div class="card-header card-header-danger">
               <div class="ct-chart" id="completedTasksChart"></div>
@@ -163,8 +164,8 @@ function myFunct()
             </div>
           </div>
         </div>
-      </div>
-      <div class="row">
+      </div> --}}
+      {{-- <div class="row">
         <div class="col-lg-6 col-md-12">
           <div class="card">
             <div class="card-header card-header-tabs card-header-primary">
@@ -210,7 +211,7 @@ function myFunct()
                             </label>
                           </div>
                         </td>
-                        <td>Sign contract for "What are conference organizers afraid of?"</td>
+                        <td>These are checkbox !</td>
                         <td class="td-actions text-right">
                           <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm" onclick="myFunct()">
                             <i class="material-icons">edit</i>
@@ -231,7 +232,7 @@ function myFunct()
                             </label>
                           </div>
                         </td>
-                        <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                        <td>Want to remember things ?</td>
                         <td class="td-actions text-right">
                           <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
                             <i class="material-icons">edit</i>
@@ -252,7 +253,7 @@ function myFunct()
                             </label>
                           </div>
                         </td>
-                        <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                        <td>Just put them here !
                         </td>
                         <td class="td-actions text-right">
                           <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
@@ -274,7 +275,7 @@ function myFunct()
                             </label>
                           </div>
                         </td>
-                        <td>Create 4 Invisible User Experiences you Never Knew About</td>
+                        <td>And check your tasks</td>
                         <td class="td-actions text-right">
                           <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
                             <i class="material-icons">edit</i>
@@ -301,7 +302,7 @@ function myFunct()
                             </label>
                           </div>
                         </td>
-                        <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                        <td>You can add several things here too !
                         </td>
                         <td class="td-actions text-right">
                           <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
@@ -323,7 +324,7 @@ function myFunct()
                             </label>
                           </div>
                         </td>
-                        <td>Sign contract for "What are conference organizers afraid of?"</td>
+                        <td>I swear I am Arthur Dassier</td>
                         <td class="td-actions text-right">
                           <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
                             <i class="material-icons">edit</i>
@@ -350,7 +351,7 @@ function myFunct()
                             </label>
                           </div>
                         </td>
-                        <td>Lines From Great Russian Literature? Or E-mails From My Boss?</td>
+                        <td>Check 1</td>
                         <td class="td-actions text-right">
                           <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
                             <i class="material-icons">edit</i>
@@ -371,7 +372,7 @@ function myFunct()
                             </label>
                           </div>
                         </td>
-                        <td>Flooded: One year later, assessing what was lost and what was found when a ravaging rain swept through metro Detroit
+                        <td>Check 2
                         </td>
                         <td class="td-actions text-right">
                           <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
@@ -393,7 +394,7 @@ function myFunct()
                             </label>
                           </div>
                         </td>
-                        <td>Sign contract for "What are conference organizers afraid of?"</td>
+                        <td>Check 3</td>
                         <td class="td-actions text-right">
                           <button type="button" rel="tooltip" title="Edit Task" class="btn btn-primary btn-link btn-sm">
                             <i class="material-icons">edit</i>
@@ -409,8 +410,8 @@ function myFunct()
               </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-6 col-md-12">
+        </div> --}}
+        {{-- <div class="col-lg-6 col-md-12">
           <div class="card">
             <div class="card-header card-header-warning">
               <h4 class="card-title">Employees Stats</h4>
@@ -470,7 +471,7 @@ function myFunct()
         </script>
       </div>
     </div>
-  </div>
+  </div> --}}
 @endsection
 
 @push('js')

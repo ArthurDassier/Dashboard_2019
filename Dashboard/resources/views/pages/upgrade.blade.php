@@ -32,12 +32,12 @@
                     <td class="text-center"><i class="fa fa-check text-success"></i></td>
                   </tr>
                   <tr>
-                    <td>User profile</td>
+                    <td>Your profile</td>
                     <td class="text-center"><i class="fa fa-check text-success"></i></td>
                     <td class="text-center"><i class="fa fa-check text-success"></i></td>
                   </tr>
                   <tr>
-                    <td>Users management</td>
+                    <td>Users</td>
                     <td class="text-center"><i class="fa fa-check text-success"></i></td>
                     <td class="text-center"><i class="fa fa-check text-success"></i></td>
                   </tr>
