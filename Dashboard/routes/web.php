@@ -18,8 +18,11 @@ Route::get('/', function () {
 Auth::routes();
 
 
-Route::get('/redirect', 'SocialAuthGoogleController@redirect');
-Route::get('/callback', 'SocialAuthGoogleController@callback');
+Route::get('google/redirect', 'SocialAuthGoogleController@redirect');
+Route::get('google/callback', 'SocialAuthGoogleController@callback');
+
+Route::get('github/redirect', 'SocialAuthGithubController@redirect');
+Route::get('github/callback', 'SocialAuthGithubController@callback');
 
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();

@@ -34,7 +34,7 @@
               <i class="fa fa-cog fa-2x"> </i>
             </a>
             <ul class="dropdown-menu">
-              <li class="header-title"> Sidebar Filters</li>
+              <li class="header-title"> Sidebar Color</li>
               <li class="adjustments-line">
                 <a href="javascript:void(0)" class="switch-trigger active-color">
                   <div class="badge-colors ml-auto mr-auto">
@@ -48,7 +48,7 @@
                   <div class="clearfix"></div>
                 </a>
               </li>
-              <li class="header-title">Images</li>
+              {{-- <li class="header-title">Images</li>
               <li class="active">
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
                   <img src="{{ asset('material') }}/img/sidebar-1.jpg" alt="">
@@ -68,7 +68,7 @@
                 <a class="img-holder switch-trigger" href="javascript:void(0)">
                   <img src="{{ asset('material') }}/img/sidebar-4.jpg" alt="">
                 </a>
-              </li>
+              </li> --}}
               <!-- <li class="button-container">
                 <a href="https://www.creative-tim.com/product/material-dashboard-laravel" target="_blank" class="btn btn-primary btn-block">Free Download</a>
               </li> -->
@@ -95,11 +95,10 @@
               <li class="button-container text-center">
                 <button id="twitter" class="btn btn-round btn-twitter"><i class="fa fa-twitter"></i> &middot; 45</button>
                 <button id="facebook" class="btn btn-round btn-facebook"><i class="fa fa-facebook-f"></i> &middot; 50</button> -->
-                <li class="adjustments-line">
-                <li class="header-title"> Widgets</li>
+                {{-- <li class="header-title"> Widgets</li>
                 <li class="adjustments-line">
                 <br>
-                <br>
+                <br> --}}
               </li>
             </ul>
           </div>

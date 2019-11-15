@@ -12,7 +12,7 @@ function myFunct()
 
 @section('content')
   <div class="content">
-    <div class="form-group">
+    {{-- <div class="form-group">
       <div class="col-lg-3 col-md-6 col-sm-6">
         <label for="test-content">Select city</label>
         @php
@@ -41,9 +41,10 @@ function myFunct()
           EventBus.$emit('event-name', data)
       }
       </script>
-    {{$citySelect}}
-    @widget('Weather', ['city' => $citySelect])
-    <div class="container-fluid">
+    {{$citySelect}} --}}
+    @widget('Weather', ['city' => 'Paris'])
+    </div>
+    {{-- <div class="container-fluid">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">
           <div class="card card-stats">
@@ -112,7 +113,7 @@ function myFunct()
             </div>
           </div>
         </div>
-      </div>
+      </div> --}}
       {{-- <div class="row">
         <div class="col-md-4">
           <div class="card card-chart">
@@ -164,7 +165,7 @@ function myFunct()
           </div>
         </div>
       </div> --}}
-      <div class="row">
+      {{-- <div class="row">
         <div class="col-lg-6 col-md-12">
           <div class="card">
             <div class="card-header card-header-tabs card-header-primary">
@@ -409,7 +410,7 @@ function myFunct()
               </div>
             </div>
           </div>
-        </div>
+        </div> --}}
         {{-- <div class="col-lg-6 col-md-12">
           <div class="card">
             <div class="card-header card-header-warning">
