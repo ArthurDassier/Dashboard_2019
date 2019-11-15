@@ -14,6 +14,7 @@
         "fideloper/proxy": "^4.0",
         "google/apiclient": "^2.0",
         "laravel-frontend-presets/material-dashboard": "^1.0",
+        "pcc/calendar": "dev-master",
         "laravel/framework": "5.8.x-dev",
         "laravel/socialite": "^3.2.0",
         "laravel/tinker": "^1.0",

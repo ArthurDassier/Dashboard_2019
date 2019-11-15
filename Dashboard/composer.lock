@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fa5d5c27054ab0dbf58cddae15053262",
+    "content-hash": "7aae566ed9fe51576378867ebe858f28",
     "packages": [
         {
             "name": "arrilot/laravel-widgets",
@@ -1772,6 +1772,44 @@
                 "random"
             ],
             "time": "2018-07-02T15:55:56+00:00"
+        },
+        {
+            "name": "pcc/calendar",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/ThePrintedCupCompany/LaravelCalendar.git",
+                "reference": "344c7d6e23c46e7f3deff9bc72711ac7327a6608"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/ThePrintedCupCompany/LaravelCalendar/zipball/344c7d6e23c46e7f3deff9bc72711ac7327a6608",
+                "reference": "344c7d6e23c46e7f3deff9bc72711ac7327a6608",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "~4|~5",
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PCC\\Calendar": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "authors": [
+                {
+                    "name": "administrator@printedcupcompany.com",
+                    "email": "administrator@printedcupcompany.com"
+                }
+            ],
+            "description": "Laravel 5 Calendar, port of the CodeIgniter Calender Library",
+            "keywords": [
+                "calendar",
+                "laravel"
+            ],
+            "time": "2017-06-22T09:25:14+00:00"
         },
         {
             "name": "phpoption/phpoption",
@@ -5817,6 +5855,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "bioudi/laravel-meta-weather-api": 15,
+        "pcc/calendar": 20,
         "laravel/framework": 20
     },
     "prefer-stable": true,
