@@ -12,40 +12,30 @@ function myFunct()
 
 @section('content')
   <div class="content">
-    {{-- <div class="form-group">
-      <div class="col-lg-3 col-md-6 col-sm-6">
-        <label for="test-content">Select city</label>
-        @php
-        $listCity = array('paris', 'new york', 'berlin', 'hong kong', 'tanger');
-        $citySelect = 'paris';
-        @endphp
-        <script>
-          function myTest(val) {
-            $citySelect = val;
-            alert($citySelect);
-            // location.reload();
-          }
-        </script>
-        <!-- <form  -->
-        <select id="cc" name="city_id" class="form-control" onChange="myTest(this.value)">
-        @foreach($listCity as $t)
-          <option> {{$t}} </option>
-        @endforeach paris
-        </select>
-      </div>
-    </div>
+    <!-- <div class="form-group"> -->
+    <form name="form" action="" method="get">
+      <input type="text" id="City" name="City" lass="form-control" placeholder="Enter a city" value="">
+      <input type="submit" value="Validate">
       <script>
-      import EventBus from './event-bus.js'
-      export default {
-          // when Axios resolves
-          EventBus.$emit('event-name', data)
-      }
+        var myImput = document.getElementById("City");
+
+        window.onload = function() {
+          if (sessionStorage.getItem("autosave"))
+            myInput.value = sessionStorage.getItem("autosave");
+        }
+        myInput.addEventListener("keyup", function() {
+          sessionStorage.setItem("autosave", myInput.value);
+        });
       </script>
-    {{$citySelect}} --}}
+    </form>
     <div class="container-fluid">
-      <!-- <div class="row"> -->
-        @widget('Weather', ['city' => 'New York'])
-        @widget('Calendar')
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          @widget('Weather')
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6">
+          @widget('Calendar')
+        </div>
       </div>
     </div>
     {{-- <div class="container-fluid">
