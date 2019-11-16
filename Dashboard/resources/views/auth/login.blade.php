@@ -14,8 +14,8 @@
           <div class="card-header card-header-primary text-center">
             <h4 class="card-title"><strong>{{ __('Login') }}</strong></h4>
             <div class="social-line">
-              <a href="#pablo" class="btn btn-just-icon btn-link btn-white">
-                <i class="fa fa-facebook-square"></i>
+              <a href="{{ url('linkedin/redirect') }}" class="btn btn-just-icon btn-link btn-white">
+                <i class="fa fa-linkedin"></i>
               </a>
               <a href="{{ url('github/redirect') }}" class="btn btn-just-icon btn-link btn-white">
                 <i class="fa fa-github"></i>

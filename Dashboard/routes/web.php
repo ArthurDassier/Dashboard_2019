@@ -24,6 +24,9 @@ Route::get('google/callback', 'SocialAuthGoogleController@callback');
 Route::get('github/redirect', 'SocialAuthGithubController@redirect');
 Route::get('github/callback', 'SocialAuthGithubController@callback');
 
+Route::get('linkedin/redirect', 'SocialAuthLinkedinController@redirect');
+Route::get('linkedin/callback', 'SocialAuthLinkedinController@callback');
+
 Route::get('/home', 'HomeController@index')->name('home');
 Auth::routes();
 

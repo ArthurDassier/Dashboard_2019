@@ -42,4 +42,16 @@ return [
         'redirect' => env('GITHUB_REDIRECT')
     ],
 
+    'imgur' => [
+        'client_id' => env('IMGUR_CLIENT_ID'),
+        'client_secret' => env('IMGUR_CLIENT_SECRET'),
+        'redirect' => env('IMGUR_REDIRECT')
+    ],
+
+    'linkedin' => [
+        'client_id' => env('LINKEDIN_CLIENT_ID'),
+        'client_secret' => env('LINKEDIN_CLIENT_SECRET'),
+        'redirect' => env('LINKEDIN_REDIRECT')
+    ],
+
 ];
