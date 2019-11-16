@@ -17,41 +17,15 @@
   // print_r(get_object_vars($weather->getByCityName('paris'))['title']);
 ?>
 
-<!-- @if($test != null)
-  <div class="form-group">
-    <div class="col-lg-3 col-md-6 col-sm-6">
-      <label for="test-content">Select city</label>
-      <select id="cc" name="city_id" class="form-control" onChange="$config['city'] = $(this).val())">
-      @foreach($test as $t)
-        <option> {{$t}} </option>
-      @endforeach
-      </select>
-      $("#cc").change(function(){
-        alert($(this).val())
-      });
-    </div>
-  </div>
-@endif -->
-<div class="content">
-  <div class="container-fluid">
-    <div class="row">
+<!-- <div class="content"> -->
+  <!-- <div class="container-fluid"> -->
+    <!-- <div class="row"> -->
       <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
           <div class="card-header card-header-info card-header-icon">
             <div class="card-icon">
               <i class="material-icons">filter_drama</i>
             </div>
-            <script>
-              import EventBus from './event-bus.js'
-              export default {
-              mounted () {
-                EventBus.$on('event-name', function (data) {
-                      // do something
-                      alert('WOOOOOOWW');
-                  })
-                }
-              }
-            </script>
             <p class="card-category">Weather in <?php print_r(get_object_vars($weather->getByCityName($config['city']))['title']);?></p>
             <h3 class="card-title">
               <?php print_r(get_object_vars(get_object_vars($weather->getByCityName($config['city']))['consolidated_weather'][0])['min_temp']);?>
@@ -66,6 +40,6 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
-</div>
+    <!-- </div> -->
+  <!-- </div> -->
+<!-- </div> -->

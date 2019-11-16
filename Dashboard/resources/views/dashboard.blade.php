@@ -42,8 +42,12 @@ function myFunct()
       }
       </script>
     {{$citySelect}} --}}
-      @widget('Weather', ['city' => 'New York'])
-      <?php echo Calendar::generate(); ?>
+    <div class="container-fluid">
+      <!-- <div class="row"> -->
+        @widget('Weather', ['city' => 'New York'])
+        @widget('Calendar')
+      </div>
+    </div>
     {{-- <div class="container-fluid">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">
