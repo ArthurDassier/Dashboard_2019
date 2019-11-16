@@ -181,6 +181,7 @@ return [
         Bioudi\LaravelMetaWeatherApi\WeatherserviceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
         'PCC\Calendar\CalendarServiceProvider',
+        FarhanWazir\GoogleMaps\GMapsServiceProvider::class,
     ],
 
     /*
@@ -234,6 +235,7 @@ return [
 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
         'Calendar' => 'PCC\Calendar\Facades\Calendar',
+        'GMaps' => FarhanWazir\GoogleMaps\Facades\GMapsFacade::class,
     ],
 
 ];

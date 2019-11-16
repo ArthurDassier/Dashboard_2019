@@ -11,14 +11,15 @@
         "php": "^7.2",
         "arrilot/laravel-widgets": "^3.13",
         "bioudi/laravel-meta-weather-api": "^0.1.2@alpha",
+        "farhanwazir/laravelgooglemaps": "dev-master",
         "fideloper/proxy": "^4.0",
         "google/apiclient": "^2.0",
         "laravel-frontend-presets/material-dashboard": "^1.0",
-        "pcc/calendar": "dev-master",
         "laravel/framework": "5.8.x-dev",
         "laravel/socialite": "^3.2.0",
         "laravel/tinker": "^1.0",
-        "laravel/ui": "^1.1"
+        "laravel/ui": "^1.1",
+        "pcc/calendar": "dev-master"
     },
     "require-dev": {
         "facade/ignition": "^1.4",

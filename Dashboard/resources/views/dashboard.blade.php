@@ -65,6 +65,38 @@ function myFunct()
               </select>
               <input type="submit" value="Validate">
             </form>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6"> <!-- Widget weather -->
+          <div class="card card-stats">
+            @widget('GoogleMap')
+            <!-- <form name="form" action="" method="get">
+              <select name="City" id="City">
+                <option value="">Please choose a city</option>
+                <option value="Paris">Paris</option>
+                <option value="New York">New York</option>
+                <option value="Casablanca">Casablanca</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Sydney">Sydney</option>
+                <option value="Barcalona">Barcalona</option>
+              </select>
+              <input type="submit" value="Validate">
+              </form> -->
+          </div>
+        </div>
+              <!-- <input type="text" id="City" name="City" lass="form-control" placeholder="Enter a city" value="">
+              <input type="submit" value="Validate">
+              <script>
+                var myImput = document.getElementById("City");
+
+                window.onload = function() {
+                  if (sessionStorage.getItem("autosave"))
+                    myInput.value = sessionStorage.getItem("autosave");
+                }
+                myInput.addEventListener("keyup", function() {
+                  sessionStorage.setItem("autosave", myInput.value);
+                });
+              </script> -->
             <!-- <form name="form" action="" method="get">
               <input type="text" id="Month" name="Month" lass="form-control" placeholder="Enter a month" value="">
               <input type="submit" value="Validate">
