@@ -11,7 +11,7 @@ class Calendar extends AbstractWidget
      *
      * @var int|float
      */
-    public $reloadTimeout = 5;
+    // public $reloadTimeout = 5;
 
     /**
      * The configuration array.
@@ -26,10 +26,13 @@ class Calendar extends AbstractWidget
      */
     public function run()
     {
-        //
-
+        $month = '11';
+        if (isset($_GET['Month'])) {
+            $month = $_GET['Month'];
+        }
         return view('widgets.calendar', [
             'config' => $this->config,
+            'month' => $month,
         ]);
     }
 }

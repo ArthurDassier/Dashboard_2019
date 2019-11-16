@@ -5,12 +5,12 @@
       </div>
       <p class="card-category"> Calendar </p>
       <h3 class="card-title">
-          <small>Calendar</small>
+          <small>{{$month}}/2019</small>
       </h3>
       </div>
       <div class="card-footer">
       <div class="stats">
-          <?php echo Calendar::generate(); ?>
+          <?php echo Calendar::generate(2019, $month); ?>
       </div>
     </div>
 </div>

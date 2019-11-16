@@ -12,29 +12,75 @@ function myFunct()
 
 @section('content')
   <div class="content">
-    <!-- <div class="form-group"> -->
-    <form name="form" action="" method="get">
-      <input type="text" id="City" name="City" lass="form-control" placeholder="Enter a city" value="">
-      <input type="submit" value="Validate">
-      <script>
-        var myImput = document.getElementById("City");
-
-        window.onload = function() {
-          if (sessionStorage.getItem("autosave"))
-            myInput.value = sessionStorage.getItem("autosave");
-        }
-        myInput.addEventListener("keyup", function() {
-          sessionStorage.setItem("autosave", myInput.value);
-        });
-      </script>
-    </form>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          @widget('Weather')
+        <div class="col-lg-3 col-md-6 col-sm-6"> <!-- Widget weather -->
+          <div class="card card-stats">
+            @widget('Weather')
+            <form name="form" action="" method="get">
+              <select name="City" id="City">
+                <option value="">Please choose a city</option>
+                <option value="Paris">Paris</option>
+                <option value="New York">New York</option>
+                <option value="Casablanca">Casablanca</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Sydney">Sydney</option>
+                <option value="Barcalona">Barcalona</option>
+              </select>
+              <input type="submit" value="Validate">
+              <!-- <input type="text" id="City" name="City" lass="form-control" placeholder="Enter a city" value="">
+              <input type="submit" value="Validate">
+              <script>
+                var myImput = document.getElementById("City");
+
+                window.onload = function() {
+                  if (sessionStorage.getItem("autosave"))
+                    myInput.value = sessionStorage.getItem("autosave");
+                }
+                myInput.addEventListener("keyup", function() {
+                  sessionStorage.setItem("autosave", myInput.value);
+                });
+              </script> -->
+            </form>
+          </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6">
-          @widget('Calendar')
+        <div class="col-lg-3 col-md-6 col-sm-6"> <!-- Widget calendar -->
+          <div class="card card-stats">
+            @widget('Calendar')
+            <form name="form" action="" method="get">
+              <select name="Month" id="Month">
+                <option value="">Please choose a month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+              <input type="submit" value="Validate">
+            </form>
+            <!-- <form name="form" action="" method="get">
+              <input type="text" id="Month" name="Month" lass="form-control" placeholder="Enter a month" value="">
+              <input type="submit" value="Validate">
+              <script>
+                var myImput = document.getElementById("Month");
+
+                window.onload = function() {
+                  if (sessionStorage.getItem("autosave"))
+                    myInput.value = sessionStorage.getItem("autosave");
+                }
+                myInput.addEventListener("keyup", function() {
+                  sessionStorage.setItem("autosave", myInput.value);
+                });
+              </script>
+            </form> -->
+          </div>
         </div>
       </div>
     </div>
