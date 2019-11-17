@@ -11,9 +11,10 @@ The project is execute with docker with 1 image for the laravel site and 1 for t
 
 ## Infrastructure of project
 
+```c
 -Dashboard_2019+--Dashboard --> laravel docker image / all files for laravel project
                |__run --> DATABASE docker image / all file for DB
-
+```
 ## How to run it
 
 If it's the first time you clone it or a new git pull, you must install the new depedencies.

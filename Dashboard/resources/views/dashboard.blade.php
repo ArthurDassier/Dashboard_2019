@@ -26,7 +26,7 @@ function myFunct()
                 <option value="Tokyo">Tokyo</option>
                 <option value="Sydney">Sydney</option>
                 <option value="Las Vegas">Las Vegas</option>
-                <option value="Los Angoles">Los Angoles</option>
+                <option value="Los Angeles">Los Angeles</option>
               </select>
               <input type="submit" value="Validate">
               <!-- <input type="text" id="City" name="City" lass="form-control" placeholder="Enter a city" value="">
