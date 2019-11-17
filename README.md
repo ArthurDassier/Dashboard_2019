@@ -26,7 +26,7 @@ $composer install
 Then, in order to run it, execute in the root directory :
 
 ```shell
-$sudo docker-compose up --build
+sudo docker-compose up --build
 ```
 
 Go in an internet browser and enter : - 0.0.0.0:8000 -> the site
