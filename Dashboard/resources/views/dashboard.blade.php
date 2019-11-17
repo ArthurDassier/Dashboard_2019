@@ -19,13 +19,14 @@ function myFunct()
             @widget('Weather')
             <form name="form" action="" method="get">
               <select name="City" id="City">
-                <option value="">Please choose a city</option>
+                <option value="Paris">Please choose a city</option>
                 <option value="Paris">Paris</option>
                 <option value="New York">New York</option>
                 <option value="Casablanca">Casablanca</option>
                 <option value="Tokyo">Tokyo</option>
                 <option value="Sydney">Sydney</option>
-                <option value="Barcalona">Barcalona</option>
+                <option value="Las Vegas">Las Vegas</option>
+                <option value="Los Angoles">Los Angoles</option>
               </select>
               <input type="submit" value="Validate">
               <!-- <input type="text" id="City" name="City" lass="form-control" placeholder="Enter a city" value="">
@@ -49,7 +50,7 @@ function myFunct()
             @widget('Calendar')
             <form name="form" action="" method="get">
               <select name="Month" id="Month">
-                <option value="">Please choose a month</option>
+                <option value="11">Please choose a month</option>
                 <option value="1">January</option>
                 <option value="2">February</option>
                 <option value="3">March</option>
@@ -67,23 +68,28 @@ function myFunct()
             </form>
           </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6"> <!-- Widget weather -->
-          <div class="card card-stats">
-            @widget('GoogleMap')
-            <!-- <form name="form" action="" method="get">
-              <select name="City" id="City">
-                <option value="">Please choose a city</option>
-                <option value="Paris">Paris</option>
-                <option value="New York">New York</option>
-                <option value="Casablanca">Casablanca</option>
-                <option value="Tokyo">Tokyo</option>
-                <option value="Sydney">Sydney</option>
-                <option value="Barcalona">Barcalona</option>
-              </select>
-              <input type="submit" value="Validate">
-              </form> -->
-          </div>
+      </div>
+    </div>
+    <div calss="row">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          @widget('Hours')
+          <form name="form" action="" method="get">
+            <select name="Hours" id="Hours">
+              <option value="Europe/Paris">Please choose a city</option>
+              <option value="Europe/Paris">Paris</option>
+              <option value="America/New York">New York</option>
+              <option value="Africa/Casablanca">Casablanca</option>
+              <option value="Japan/Tokyo">Tokyo</option>
+              <option value="Australia/Sydney">Sydney</option>
+              <option value="America/Las Vegas">Las Vegas</option>
+              <option value="America/Los Angoles">Los Angoles</option>
+            </select>
+            <input type="submit" value="Validate">
+          </form>
         </div>
+      </div>
+    </div>
               <!-- <input type="text" id="City" name="City" lass="form-control" placeholder="Enter a city" value="">
               <input type="submit" value="Validate">
               <script>
@@ -112,10 +118,6 @@ function myFunct()
                 });
               </script>
             </form> -->
-          </div>
-        </div>
-      </div>
-    </div>
     {{-- <div class="container-fluid">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">

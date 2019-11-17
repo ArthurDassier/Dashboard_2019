@@ -3,7 +3,7 @@
       <div class="card-icon">
           <i class="material-icons">calendar_today</i>
       </div>
-      <p class="card-category"> Calendar </p>
+      <p class="card-category"> Calendar <?php echo date('Y-m-d');?></p>
       <h3 class="card-title">
           <small>{{$month}}/2019</small>
       </h3>
