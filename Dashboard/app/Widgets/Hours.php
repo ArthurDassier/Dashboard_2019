@@ -4,23 +4,21 @@ namespace App\Widgets;
 
 use Arrilot\Widgets\AbstractWidget;
 
-class Weather extends AbstractWidget
+class Hours extends AbstractWidget
 {
     /**
      * The number of seconds before each reload.
      *
      * @var int|float
      */
-    // public $reloadTimeout = 5;
+    public $reloadTimeout = 1;
 
     /**
      * The configuration array.
      *
      * @var array
      */
-    protected $config = [
-        'city' => ''
-    ];
+    protected $config = [];
 
     /**
      * Treat this method as a controller action.
@@ -28,12 +26,14 @@ class Weather extends AbstractWidget
      */
     public function run()
     {
-        $city = 'paris';
-        if (isset($_GET['City'])) {
-            $city = $_GET['City'];
+        static $hours = 'Europe/Paris';
+
+        if (isset($_GET['Hours'])) {
+            $hours = $_GET['Hours'];
         }
-        return view('widgets.weather', [
-            'city' => $city,
+        return view('widgets.hours', [
+            'config' => $this->config,
+            'hours' => $hours,
         ]);
     }
 }

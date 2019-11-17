@@ -12,38 +12,134 @@ function myFunct()
 
 @section('content')
   <div class="content">
-    {{-- <div class="form-group">
-      <div class="col-lg-3 col-md-6 col-sm-6">
-        <label for="test-content">Select city</label>
-        @php
-        $listCity = array('paris', 'new york', 'berlin', 'hong kong', 'tanger');
-        $citySelect = 'paris';
-        @endphp
-        <script>
-          function myTest(val) {
-            $citySelect = val;
-            alert($citySelect);
-            // location.reload();
-          }
-        </script>
-        <!-- <form  -->
-        <select id="cc" name="city_id" class="form-control" onChange="myTest(this.value)">
-        @foreach($listCity as $t)
-          <option> {{$t}} </option>
-        @endforeach paris
-        </select>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-6"> <!-- Widget weather -->
+          <div class="card card-stats">
+            @widget('Weather')
+            <form name="form" action="" method="get">
+              <select name="City" id="City">
+                <option value="Paris">Please choose a city</option>
+                <option value="Paris">Paris</option>
+                <option value="New York">New York</option>
+                <option value="Casablanca">Casablanca</option>
+                <option value="Tokyo">Tokyo</option>
+                <option value="Sydney">Sydney</option>
+                <option value="Las Vegas">Las Vegas</option>
+                <option value="Los Angoles">Los Angoles</option>
+              </select>
+              <input type="submit" value="Validate">
+              <!-- <input type="text" id="City" name="City" lass="form-control" placeholder="Enter a city" value="">
+              <input type="submit" value="Validate">
+              <script>
+                var myImput = document.getElementById("City");
+
+                window.onload = function() {
+                  if (sessionStorage.getItem("autosave"))
+                    myInput.value = sessionStorage.getItem("autosave");
+                }
+                myInput.addEventListener("keyup", function() {
+                  sessionStorage.setItem("autosave", myInput.value);
+                });
+              </script> -->
+            </form>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-6"> <!-- Widget calendar -->
+          <div class="card card-stats">
+            @widget('Calendar')
+            <form name="form" action="" method="get">
+              <select name="Month" id="Month">
+                <option value="11">Please choose a month</option>
+                <option value="1">January</option>
+                <option value="2">February</option>
+                <option value="3">March</option>
+                <option value="4">April</option>
+                <option value="5">May</option>
+                <option value="6">June</option>
+                <option value="7">July</option>
+                <option value="8">August</option>
+                <option value="9">September</option>
+                <option value="10">October</option>
+                <option value="11">November</option>
+                <option value="12">December</option>
+              </select>
+              <input type="submit" value="Validate">
+            </form>
+          </div>
+        </div>
       </div>
     </div>
-      <script>
-      import EventBus from './event-bus.js'
-      export default {
-          // when Axios resolves
-          EventBus.$emit('event-name', data)
-      }
-      </script>
-    {{$citySelect}} --}}
-    @widget('Weather', ['city' => 'Paris'])
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          @widget('Insta')
+          <form name="form" action="" method="get">
+            <input type="text" id="Insta_key" name="Insta_key" lass="form-control" placeholder="Enter a key" value="">
+            <input type="submit" value="Validate">
+            <script>
+              var myImput = document.getElementById("Insta_key");
+
+              window.onload = function() {
+              if (sessionStorage.getItem("autosave"))
+                  myInput.value = sessionStorage.getItem("autosave");
+              }
+              myInput.addEventListener("keyup", function() {
+                sessionStorage.setItem("autosave", myInput.value);
+              });
+            </script>
+          </form>
+          <a href="https://instagram.pixelunion.net/"> Take a key for you !</a>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          @widget('Hours')
+          <form name="form" action="" method="get">
+            <select name="Hours" id="Hours">
+              <option value="Europe/Paris">Please choose a city</option>
+              <option value="Europe/Paris">Paris</option>
+              <option value="America/New York">New York</option>
+              <option value="Africa/Casablanca">Casablanca</option>
+              <option value="Japan/Tokyo">Tokyo</option>
+              <option value="Australia/Sydney">Sydney</option>
+              <option value="America/Las Vegas">Las Vegas</option>
+              <option value="America/Los Angoles">Los Angoles</option>
+            </select>
+            <input type="submit" value="Validate">
+          </form>
+        </div>
+      </div>
     </div>
+  </div>
+              <!-- <input type="text" id="City" name="City" lass="form-control" placeholder="Enter a city" value="">
+              <input type="submit" value="Validate">
+              <script>
+                var myImput = document.getElementById("City");
+
+                window.onload = function() {
+                  if (sessionStorage.getItem("autosave"))
+                    myInput.value = sessionStorage.getItem("autosave");
+                }
+                myInput.addEventListener("keyup", function() {
+                  sessionStorage.setItem("autosave", myInput.value);
+                });
+              </script> -->
+            <!-- <form name="form" action="" method="get">
+              <input type="text" id="Month" name="Month" lass="form-control" placeholder="Enter a month" value="">
+              <input type="submit" value="Validate">
+              <script>
+                var myImput = document.getElementById("Month");
+
+                window.onload = function() {
+                  if (sessionStorage.getItem("autosave"))
+                    myInput.value = sessionStorage.getItem("autosave");
+                }
+                myInput.addEventListener("keyup", function() {
+                  sessionStorage.setItem("autosave", myInput.value);
+                });
+              </script>
+            </form> -->
     {{-- <div class="container-fluid">
       <div class="row">
         <div class="col-lg-3 col-md-6 col-sm-6">

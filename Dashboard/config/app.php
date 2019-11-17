@@ -180,6 +180,7 @@ return [
          */
         Bioudi\LaravelMetaWeatherApi\WeatherserviceProvider::class,
         Laravel\Socialite\SocialiteServiceProvider::class,
+        'PCC\Calendar\CalendarServiceProvider',
     ],
 
     /*
@@ -232,6 +233,7 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
         'Socialite' => Laravel\Socialite\Facades\Socialite::class,
+        'Calendar' => 'PCC\Calendar\Facades\Calendar',
     ],
 
 ];

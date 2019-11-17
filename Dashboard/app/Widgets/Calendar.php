@@ -4,7 +4,7 @@ namespace App\Widgets;
 
 use Arrilot\Widgets\AbstractWidget;
 
-class Weather extends AbstractWidget
+class Calendar extends AbstractWidget
 {
     /**
      * The number of seconds before each reload.
@@ -18,9 +18,7 @@ class Weather extends AbstractWidget
      *
      * @var array
      */
-    protected $config = [
-        'city' => ''
-    ];
+    protected $config = [];
 
     /**
      * Treat this method as a controller action.
@@ -28,12 +26,13 @@ class Weather extends AbstractWidget
      */
     public function run()
     {
-        $city = 'paris';
-        if (isset($_GET['City'])) {
-            $city = $_GET['City'];
+        $month = '11';
+        if (isset($_GET['Month'])) {
+            $month = $_GET['Month'];
         }
-        return view('widgets.weather', [
-            'city' => $city,
+        return view('widgets.calendar', [
+            'config' => $this->config,
+            'month' => $month,
         ]);
     }
 }
