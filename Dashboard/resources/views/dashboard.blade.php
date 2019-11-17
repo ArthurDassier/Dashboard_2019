@@ -70,7 +70,28 @@ function myFunct()
         </div>
       </div>
     </div>
-    <div calss="row">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="card card-stats">
+          @widget('Insta')
+          <form name="form" action="" method="get">
+            <input type="text" id="Insta_key" name="Insta_key" lass="form-control" placeholder="Enter a key" value="">
+            <input type="submit" value="Validate">
+            <script>
+              var myImput = document.getElementById("Insta_key");
+
+              window.onload = function() {
+              if (sessionStorage.getItem("autosave"))
+                  myInput.value = sessionStorage.getItem("autosave");
+              }
+              myInput.addEventListener("keyup", function() {
+                sessionStorage.setItem("autosave", myInput.value);
+              });
+            </script>
+          </form>
+          <a href="https://instagram.pixelunion.net/"> Take a key for you !</a>
+        </div>
+      </div>
       <div class="col-lg-3 col-md-6 col-sm-6">
         <div class="card card-stats">
           @widget('Hours')
@@ -91,11 +112,12 @@ function myFunct()
       </div>
     </div>
     <?php
-    use Vinkla\Instagram\Instagram;
+        use Vinkla\Instagram\Instagram;
 
-    $instagram = new Instagram('6888407695.1677ed0.61ab1c0148824827b0c7804b66f886ce');
-    var_dump($instagram->self());
-    ?>
+        $instagram = new Instagram('6888407695.1677ed0.61ab1c0148824827b0c7804b66f886ce');
+        var_dump($instagram->self());
+      ?>
+  </div>
               <!-- <input type="text" id="City" name="City" lass="form-control" placeholder="Enter a city" value="">
               <input type="submit" value="Validate">
               <script>
