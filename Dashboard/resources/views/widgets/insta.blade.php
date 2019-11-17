@@ -13,9 +13,12 @@
     <font color="black">posts : {{$info_insta['profil_media']}} | follows : {{$info_insta['profil_follows']}} | followed_by : {{$info_insta['profil_followed_by']}}</font> 
   </div>
   <div class="card-footer">
-    <div class="stats">
-      les infos insta et le blabla
-    </div>
+    Most recent post :
+    <img src="{{$info_post['recent_post_image']}}">
+    <br>
+    {{$info_post['recent_post_name']}}
+    <br>
+    likes: {{$info_post['recent_post_like']}}
   </div>
 </div>
 

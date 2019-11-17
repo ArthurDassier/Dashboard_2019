@@ -42,9 +42,20 @@ class Insta extends AbstractWidget
             'profil_followed_by' => $profil_followed_by,
 
         ];
+
+        $recent_post_image = get_object_vars(get_object_vars(get_object_vars($instagram->media()[0])['images'])['standard_resolution'])['url'];
+        $recent_post_name = get_object_vars(get_object_vars($instagram->media()[0])['caption'])['text'];
+        $recent_post_like = get_object_vars(get_object_vars($instagram->media()[0])['likes'])['count'];
+        $info_post = [
+            'recent_post_image' => $recent_post_image, 
+            'recent_post_name' => $recent_post_name,
+            'recent_post_like' => $recent_post_like,
+        ];
+
         return view('widgets.insta', [
             'config' => $this->config,
             'info_insta' => $info_insta,
+            'info_post' => $info_post,
         ]);
     }
 }
