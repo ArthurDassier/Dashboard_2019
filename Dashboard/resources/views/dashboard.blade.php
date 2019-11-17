@@ -90,6 +90,12 @@ function myFunct()
         </div>
       </div>
     </div>
+    <?php
+    use Vinkla\Instagram\Instagram;
+
+    $instagram = new Instagram('6888407695.1677ed0.61ab1c0148824827b0c7804b66f886ce');
+    var_dump($instagram->self());
+    ?>
               <!-- <input type="text" id="City" name="City" lass="form-control" placeholder="Enter a city" value="">
               <input type="submit" value="Validate">
               <script>
