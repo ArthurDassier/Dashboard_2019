@@ -11,8 +11,10 @@ The project is execute with docker with 1 image for the laravel site and 1 for t
 
 ## Infrastructure of project
 
+```shell
 -Dashboard_2019+--Dashboard --> laravel docker image / all files for laravel project
                |__run --> DATABASE docker image / all file for DB
+```
 
 ## How to run it
 
@@ -22,7 +24,10 @@ $composer update
 $composer install
 
 Then, in order to run it, execute in the root directory :
-$sudo docker-compose up --build
+
+```shell
+sudo docker-compose up --build
+```
 
 Go in an internet browser and enter : - 0.0.0.0:8000 -> the site
                                       - 0.0.0.0:8080 -> the myphpadmin (DB manager mySQL)
