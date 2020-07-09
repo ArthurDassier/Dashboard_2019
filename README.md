@@ -1,15 +1,15 @@
 # Dashboard
 
-## Members group
+## Group members
 
 camille.bouzerand@epitech.eu
 arthur.dassier@epitech.eu
 
 ## Docker
 
-The project is execute with docker with 1 image for the laravel site and 1 for the mySQL db (and a 3rd for myphpadmin).
+The project is executed with docker with 1 image for the laravel site and 1 for the mySQL db (and a 3rd for myphpadmin).
 
-## Infrastructure of project
+## Infrastructure
 
 ```shell
 -Dashboard_2019+--Dashboard --> laravel docker image / all files for laravel project
@@ -18,12 +18,12 @@ The project is execute with docker with 1 image for the laravel site and 1 for t
 
 ## How to run it
 
-If it's the first time you clone it or a new git pull, you must install the new depedencies.
-In order to do that, go in the directory "Dashboard" and execute:
+If it's the first time you clone it or if it's a new git pull, you must install the new depedencies.
+To do that, go in the directory "Dashboard" and execute:
 $composer update
 $composer install
 
-Then, in order to run it, execute in the root directory :
+To run it, execute in the root directory :
 
 ```shell
 sudo docker-compose up --build
@@ -32,7 +32,7 @@ sudo docker-compose up --build
 Go in an internet browser and enter : - 0.0.0.0:8000 -> the site
                                       - 0.0.0.0:8080 -> the myphpadmin (DB manager mySQL)
 
-## How to login on the site
+## How to login
 
 ### Register
 
